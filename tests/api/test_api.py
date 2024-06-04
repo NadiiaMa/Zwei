@@ -14,4 +14,8 @@ def test_name(user):
 
 @pytest.mark.check
 def test_second_name(user):
+<<<<<<< HEAD
     assert user.second_name == "Makliak"    
+=======
+    assert user.second_name == "Makliak"
+>>>>>>> b2d02cb (lost in commits)
