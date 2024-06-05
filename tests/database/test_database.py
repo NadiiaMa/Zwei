@@ -19,7 +19,7 @@ def test_check_all_users():
 @pytest.mark.database
 def test_check_user_sergii():
     db = Database()
-    user = db.get_user_address_by_name('Sergii')
+    user= db.get_user_address_by_name('Sergii')
 
     assert user[0][0] == 'Maydan Nezalezhnosti 1'
     assert user[0][1] == 'Kyiv'
@@ -28,18 +28,18 @@ def test_check_user_sergii():
 
 
 @pytest.mark.database
-def test_product_qnt_update():
+def test_products_qnt_update():
     db = Database()
-    db.update_product_qnt_by_id(1, 25)
-    water_qnt = db.select_product_qnt_by_id(1)
+    db.update_products_qnt_by_id(1, 25)
+    water_qnt = db.select_products_qnt_by_id(1)
 
     assert water_qnt[0][0] == 25
 
 
 @pytest.mark.database
-def test_product_insert():
+def test_products_insert():
     db = Database()
-    db.insert_product(4, 'печиво', 'солодке', 30)
-    water_qnt = db.select_product_qnt_by_id(4)
+    db.insert_products(4, 'печиво', 'солодке', 30)
+    water_qnt = db.select_products_qnt_by_id(4)
 
-    assert water_qnt[0][0] ==30    
+    assert water_qnt[0][0] ==30
