@@ -4,7 +4,7 @@ import sqlite3
 class Database():
 
     def __init__(self):
-        self.connection = sqlite3.connect(r'\\Users\\nadiiamaklyak\\Zwei\\Become QA Auto'+'\\become_qa_auto.db')
+        self.connection = sqlite3.connect(r'\\Users\\nadiiamaklyak\\Zwei\\Become QA Auto'+r'\\become_qa_auto.db')
         self.cursor = self.connection.cursor()
 
     def test_connection(self):
@@ -17,4 +17,5 @@ class Database():
         query = "SELECT name, address, city FROM customers"
         self.cursor.execute(query)
         record = self.cursor.fetchall()
-        return record   
+        return record
+    
